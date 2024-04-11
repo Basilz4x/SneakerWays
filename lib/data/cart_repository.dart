@@ -38,7 +38,7 @@ class CartRepository {
       final userDoc = await _firestore.collection("Users").doc(userId).get();
 
       if (userDoc.exists) {
-        final cart = userDoc.data()?["cart"] as List<dynamic> ?? [];
+        final cart = userDoc.data()?["cart"] as List<dynamic>;
         final mappedCart = _mapCart(cart);
         final itemIndex = mappedCart.indexWhere((cartItem) {
           return cartItem["id"] == sneakerCartItem["id"] &&

@@ -84,7 +84,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                 ),
                 CustomTextFormField(
                   hint: "Password",
-                  obscure: false,
+                  obscure: true,
                   icon: Icons.lock_outline_rounded,
                   controller: _passwordController,
                 ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:sneakers_shop_app/constants/app_contant.dart';
 import 'package:sneakers_shop_app/constants/colors_constant.dart';
 import 'package:sneakers_shop_app/controllers/home_page_controller.dart';
 import 'package:sneakers_shop_app/utils/build_context_extension.dart';

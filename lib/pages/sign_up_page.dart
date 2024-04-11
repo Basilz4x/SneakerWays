@@ -102,7 +102,7 @@ class _LoginPageState extends ConsumerState<SignUpPage> {
                   ),
                   CustomTextFormField(
                     hint: "Password",
-                    obscure: false,
+                    obscure: true,
                     icon: Icons.lock_outline_rounded,
                     controller: _passwordController,
                     validtor: _validatePassword,
@@ -112,7 +112,7 @@ class _LoginPageState extends ConsumerState<SignUpPage> {
                   ),
                   CustomTextFormField(
                     hint: "Confirm Password",
-                    obscure: false,
+                    obscure: true,
                     icon: Icons.lock_outline_rounded,
                     controller: _confirmPasswordController,
                   ),
