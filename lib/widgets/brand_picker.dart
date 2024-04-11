@@ -57,103 +57,143 @@ class _BrandPickerState extends ConsumerState<BrandPicker> {
               },
               controller: _pageController,
               children: [
-                AnimatedContainer(
-                  duration: Duration(milliseconds: _animationDuration),
-                  width: brandIndex == 0 ? _chosenBrandHW : _notChosenBrandHW,
-                  height: brandIndex == 0 ? _chosenBrandHW : _notChosenBrandHW,
-                  decoration: BoxDecoration(
-                    color: brandIndex == 0
-                        ? AppColor.chosenBrandContainerColor
-                        : AppColor.notChosenBrandContainerColor,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Transform.scale(
-                    scale: 0.4,
-                    child: Image.asset(
-                      "lib/images/puma-logo.png",
+                GestureDetector(
+                  onTap: () {
+                    _pageController.animateToPage(getIndexByBrand("puma"),
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.linearToEaseOut);
+                  },
+                  child: AnimatedContainer(
+                    duration: Duration(milliseconds: _animationDuration),
+                    width: brandIndex == 0 ? _chosenBrandHW : _notChosenBrandHW,
+                    height:
+                        brandIndex == 0 ? _chosenBrandHW : _notChosenBrandHW,
+                    decoration: BoxDecoration(
                       color: brandIndex == 0
-                          ? AppColor.chosenBrandImageColor
-                          : AppColor.notChosenBrandImageColor,
+                          ? AppColor.chosenBrandContainerColor
+                          : AppColor.notChosenBrandContainerColor,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Transform.scale(
+                      scale: 0.4,
+                      child: Image.asset(
+                        "lib/images/puma-logo.png",
+                        color: brandIndex == 0
+                            ? AppColor.chosenBrandImageColor
+                            : AppColor.notChosenBrandImageColor,
+                      ),
                     ),
                   ),
                 ),
-                AnimatedContainer(
-                  duration: Duration(milliseconds: _animationDuration),
-                  width: brandIndex == 1 ? _chosenBrandHW : _notChosenBrandHW,
-                  height: brandIndex == 1 ? _chosenBrandHW : _notChosenBrandHW,
-                  decoration: BoxDecoration(
-                    color: brandIndex == 1
-                        ? AppColor.chosenBrandContainerColor
-                        : AppColor.notChosenBrandContainerColor,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Transform.scale(
-                    scale: 0.70,
-                    child: Image.asset(
-                      "lib/images/adidas-logo.png",
+                GestureDetector(
+                  onTap: () {
+                    _pageController.animateToPage(getIndexByBrand("adidas"),
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.linearToEaseOut);
+                  },
+                  child: AnimatedContainer(
+                    duration: Duration(milliseconds: _animationDuration),
+                    width: brandIndex == 1 ? _chosenBrandHW : _notChosenBrandHW,
+                    height:
+                        brandIndex == 1 ? _chosenBrandHW : _notChosenBrandHW,
+                    decoration: BoxDecoration(
                       color: brandIndex == 1
-                          ? AppColor.chosenBrandImageColor
-                          : AppColor.notChosenBrandImageColor,
+                          ? AppColor.chosenBrandContainerColor
+                          : AppColor.notChosenBrandContainerColor,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Transform.scale(
+                      scale: 0.70,
+                      child: Image.asset(
+                        "lib/images/adidas-logo.png",
+                        color: brandIndex == 1
+                            ? AppColor.chosenBrandImageColor
+                            : AppColor.notChosenBrandImageColor,
+                      ),
                     ),
                   ),
                 ),
-                AnimatedContainer(
-                  duration: Duration(milliseconds: _animationDuration),
-                  width: brandIndex == 2 ? _chosenBrandHW : _notChosenBrandHW,
-                  height: brandIndex == 2 ? _chosenBrandHW : _notChosenBrandHW,
-                  decoration: BoxDecoration(
-                    color: brandIndex == 2
-                        ? AppColor.chosenBrandContainerColor
-                        : AppColor.notChosenBrandContainerColor,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Transform.scale(
-                    scale: 0.7,
-                    child: Image.asset(
-                      "lib/images/nike-logo.png",
+                GestureDetector(
+                  onTap: () {
+                    _pageController.animateToPage(getIndexByBrand("nike"),
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.linearToEaseOut);
+                  },
+                  child: AnimatedContainer(
+                    duration: Duration(milliseconds: _animationDuration),
+                    width: brandIndex == 2 ? _chosenBrandHW : _notChosenBrandHW,
+                    height:
+                        brandIndex == 2 ? _chosenBrandHW : _notChosenBrandHW,
+                    decoration: BoxDecoration(
                       color: brandIndex == 2
-                          ? AppColor.chosenBrandImageColor
-                          : AppColor.notChosenBrandImageColor,
+                          ? AppColor.chosenBrandContainerColor
+                          : AppColor.notChosenBrandContainerColor,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Transform.scale(
+                      scale: 0.7,
+                      child: Image.asset(
+                        "lib/images/nike-logo.png",
+                        color: brandIndex == 2
+                            ? AppColor.chosenBrandImageColor
+                            : AppColor.notChosenBrandImageColor,
+                      ),
                     ),
                   ),
                 ),
-                AnimatedContainer(
-                  duration: Duration(milliseconds: _animationDuration),
-                  width: brandIndex == 3 ? _chosenBrandHW : _notChosenBrandHW,
-                  height: brandIndex == 3 ? _chosenBrandHW : _notChosenBrandHW,
-                  decoration: BoxDecoration(
-                    color: brandIndex == 3
-                        ? AppColor.chosenBrandContainerColor
-                        : AppColor.notChosenBrandContainerColor,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Transform.scale(
-                    scale: 0.65,
-                    child: Image.asset(
-                      "lib/images/jordan-logo.png",
+                GestureDetector(
+                  onTap: () {
+                    _pageController.animateToPage(getIndexByBrand("jordan"),
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.linearToEaseOut);
+                  },
+                  child: AnimatedContainer(
+                    duration: Duration(milliseconds: _animationDuration),
+                    width: brandIndex == 3 ? _chosenBrandHW : _notChosenBrandHW,
+                    height:
+                        brandIndex == 3 ? _chosenBrandHW : _notChosenBrandHW,
+                    decoration: BoxDecoration(
                       color: brandIndex == 3
-                          ? AppColor.chosenBrandImageColor
-                          : AppColor.notChosenBrandImageColor,
+                          ? AppColor.chosenBrandContainerColor
+                          : AppColor.notChosenBrandContainerColor,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Transform.scale(
+                      scale: 0.65,
+                      child: Image.asset(
+                        "lib/images/jordan-logo.png",
+                        color: brandIndex == 3
+                            ? AppColor.chosenBrandImageColor
+                            : AppColor.notChosenBrandImageColor,
+                      ),
                     ),
                   ),
                 ),
-                AnimatedContainer(
-                  duration: Duration(milliseconds: _animationDuration),
-                  width: brandIndex == 4 ? _chosenBrandHW : _notChosenBrandHW,
-                  height: brandIndex == 4 ? _chosenBrandHW : _notChosenBrandHW,
-                  decoration: BoxDecoration(
-                    color: brandIndex == 4
-                        ? AppColor.chosenBrandContainerColor
-                        : AppColor.notChosenBrandContainerColor,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Transform.scale(
-                    scale: 1.1,
-                    child: Image.asset(
-                      "lib/images/reebok-logo.png",
+                GestureDetector(
+                  onTap: () {
+                    _pageController.animateToPage(getIndexByBrand("reebok"),
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.linearToEaseOut);
+                  },
+                  child: AnimatedContainer(
+                    duration: Duration(milliseconds: _animationDuration),
+                    width: brandIndex == 4 ? _chosenBrandHW : _notChosenBrandHW,
+                    height:
+                        brandIndex == 4 ? _chosenBrandHW : _notChosenBrandHW,
+                    decoration: BoxDecoration(
                       color: brandIndex == 4
-                          ? AppColor.chosenBrandImageColor
-                          : AppColor.notChosenBrandImageColor,
+                          ? AppColor.chosenBrandContainerColor
+                          : AppColor.notChosenBrandContainerColor,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Transform.scale(
+                      scale: 1.1,
+                      child: Image.asset(
+                        "lib/images/reebok-logo.png",
+                        color: brandIndex == 4
+                            ? AppColor.chosenBrandImageColor
+                            : AppColor.notChosenBrandImageColor,
+                      ),
                     ),
                   ),
                 )
