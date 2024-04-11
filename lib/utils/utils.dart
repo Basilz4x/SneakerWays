@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:sneakers_shop_app/constants/app_contant.dart';
 
-int getIndexByBrand(String brand) {
-  switch (brand.toLowerCase()) {
-    case "puma":
+int getIndexByBrand(Brand brand) {
+  switch (brand) {
+    case Brand.puma:
       return 0;
-    case "adidas":
+    case Brand.adidas:
       return 1;
-    case "nike":
+    case Brand.nike:
       return 2;
-    case "jordan":
+    case Brand.jordan:
       return 3;
-    case "reebok":
+    case Brand.reebok:
       return 4;
     default:
       return 2;
@@ -20,17 +21,17 @@ int getIndexByBrand(String brand) {
 String getBrandByIndex(int index) {
   switch (index) {
     case 0:
-      return "puma";
+      return Brand.puma.name;
     case 1:
-      return "adidas";
+      return Brand.adidas.name;
     case 2:
-      return "nike";
+      return Brand.nike.name;
     case 3:
-      return "jordan";
+      return Brand.jordan.name;
     case 4:
-      return "reebok";
+      return Brand.reebok.name;
     default:
-      return "nike";
+      return Brand.nike.name;
   }
 }
 

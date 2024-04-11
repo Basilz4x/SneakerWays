@@ -32,17 +32,4 @@ class SneakerRepositroy {
         allSneakers.firstWhere((sneaker) => sneaker.id.contains(cartItemId));
     return sneaker;
   }
-
-  Future<List<Sneaker>> searchForSneakrs(String searchQuery) async {
-    final sneakerSnapshot = await _fireStore
-        .collection("Sneakers")
-        .where("name", isEqualTo: searchQuery)
-        .get();
-
-    final mappedSneakers = sneakerSnapshot.docs
-        .map((queryDoc) => Sneaker.fromJson(queryDoc.data()))
-        .toList();
-
-    return mappedSneakers;
-  }
 }

@@ -59,7 +59,7 @@ class _BrandPickerState extends ConsumerState<BrandPicker> {
               children: [
                 GestureDetector(
                   onTap: () {
-                    _pageController.animateToPage(getIndexByBrand("puma"),
+                    _pageController.animateToPage(getIndexByBrand(Brand.puma),
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.linearToEaseOut);
                   },
@@ -87,7 +87,7 @@ class _BrandPickerState extends ConsumerState<BrandPicker> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    _pageController.animateToPage(getIndexByBrand("adidas"),
+                    _pageController.animateToPage(getIndexByBrand(Brand.adidas),
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.linearToEaseOut);
                   },
@@ -115,7 +115,7 @@ class _BrandPickerState extends ConsumerState<BrandPicker> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    _pageController.animateToPage(getIndexByBrand("nike"),
+                    _pageController.animateToPage(getIndexByBrand(Brand.nike),
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.linearToEaseOut);
                   },
@@ -143,7 +143,7 @@ class _BrandPickerState extends ConsumerState<BrandPicker> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    _pageController.animateToPage(getIndexByBrand("jordan"),
+                    _pageController.animateToPage(getIndexByBrand(Brand.jordan),
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.linearToEaseOut);
                   },
@@ -171,7 +171,7 @@ class _BrandPickerState extends ConsumerState<BrandPicker> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    _pageController.animateToPage(getIndexByBrand("reebok"),
+                    _pageController.animateToPage(getIndexByBrand(Brand.reebok),
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.linearToEaseOut);
                   },
