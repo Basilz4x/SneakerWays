@@ -64,17 +64,15 @@ class _CartSneakerCardState extends ConsumerState<CartSneakerCard> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    sneaker.name,
-                                    style:
-                                        context.textTheme.titleMedium!.copyWith(
-                                      color: AppColor.textColor,
-                                    ),
+                              FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Text(
+                                  sneaker.name,
+                                  style:
+                                      context.textTheme.titleMedium!.copyWith(
+                                    color: AppColor.textColor,
                                   ),
-                                  const Spacer(),
-                                ],
+                                ),
                               ),
                               Text(
                                 "men's shoes",
