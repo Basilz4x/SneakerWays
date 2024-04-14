@@ -159,7 +159,6 @@ class _CartPageState extends ConsumerState<CartPage> {
   Future<void> _calculatePrice() async {
     totalPrice = 0;
     final cart = await ref.read(cartRepositroyProvider).getCart();
-    print("before empty: ${cart.length}");
     if (cart.isEmpty) {
       setState(() {
         priceCalcFinshed = true;

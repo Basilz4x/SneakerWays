@@ -14,7 +14,6 @@ class CustomSizeButton extends ConsumerWidget {
   Widget build(BuildContext context, ref) {
     return GestureDetector(
       onTap: () {
-        debugPrint("in class ${sizeStock.size}");
         ref
             .read(sizeSelectedProvider.notifier)
             .update((state) => sizeStock.size);

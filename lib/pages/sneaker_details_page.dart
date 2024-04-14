@@ -47,7 +47,6 @@ class _SneakerDetailsPageState extends ConsumerState<SneakerDetailsPage> {
   Widget build(BuildContext context) {
     final colorSelected = ref.watch(colorSelectedProvider);
     final sizeSelected = ref.watch(sizeSelectedProvider);
-    debugPrint(sizeSelected.toString());
 
     return Scaffold(
       backgroundColor: AppColor.backgroundColor,
