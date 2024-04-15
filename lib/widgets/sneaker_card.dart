@@ -13,7 +13,6 @@ class SneakerCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        preloadImages(context, sneaker);
         Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => SneakerDetailsPage(
                   sneaker: sneaker,
@@ -105,11 +104,5 @@ class SneakerCard extends StatelessWidget {
             ),
           )),
     );
-  }
-
-  void preloadImages(BuildContext context, Sneaker sneaker) {
-    for (var variant in sneaker.variants) {
-      precacheImage(NetworkImage(variant.images[0]), context);
-    }
   }
 }
